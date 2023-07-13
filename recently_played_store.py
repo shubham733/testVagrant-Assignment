@@ -4,7 +4,7 @@ from typing import List
 class RecentlyPlayedStore:
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.store = {}
+        self.store = {}  
 
     def add_song(self, user: str, song: str):
         if user not in self.store:
@@ -21,19 +21,3 @@ class RecentlyPlayedStore:
             print(f"User: {user}")
             for song in songs:
                 print(f"   - {song}")
-
-# Usage example
-store = RecentlyPlayedStore(3)
-store.add_song("user1", "S1")
-store.add_song("user1", "S2")
-store.add_song("user1", "S3")
-store.add_song("user1", "S4")
-store.add_song("user1", "S2")
-store.add_song("user1", "S1")
-store.add_song("user2", "S5")
-store.add_song("user2", "S6")
-store.add_song("user2", "S7")
-store.add_song("user2", "S8")
-store.print_store()
-print(store.get_recently_played("user1"))
-print(store.get_recently_played("user2"))
