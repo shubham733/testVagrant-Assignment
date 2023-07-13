@@ -1,4 +1,4 @@
-from recently_played_store import RecentlyPlayedStore;
+from program.recently_played_store import RecentlyPlayedStore;
 
 store = RecentlyPlayedStore(3)
 store.add_song("user1", "S1")

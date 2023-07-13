@@ -1,5 +1,4 @@
-import pytest
-from recently_played_store import RecentlyPlayedStore
+from program.recently_played_store import RecentlyPlayedStore
 
 
 def test_add_song():
