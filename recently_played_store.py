@@ -4,7 +4,7 @@ from typing import List
 class RecentlyPlayedStore:
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.store = {}  
+        self.store = {}
 
     def add_song(self, user: str, song: str):
         if user not in self.store:
