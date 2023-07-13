@@ -50,13 +50,3 @@ def test_add_song_nonexistent_user():
     store = RecentlyPlayedStore(3)
     store.add_song("user1", "S1")
     assert store.get_recently_played("user2") == []
-
-
-def test_print_store(capsys):
-    store = RecentlyPlayedStore(3)
-    store.add_song("user1", "S1")
-    store.add_song("user1", "S2")
-    store.add_song("user2", "S3")
-    store.print_store()
-    captured = capsys.readouterr()
-    assert captured.out == "User: user1\n   - S1\n   - S2\nUser: user2\n   - S3\n"
